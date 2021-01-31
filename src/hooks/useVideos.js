@@ -6,7 +6,7 @@ const useVideos = (defaultSearchTerm) => {
 
     useEffect(() => {
         Search(defaultSearchTerm);
-    }, []);
+    }, [defaultSearchTerm]);
 
     const Search = async (term) => {
         const response = await youtube.get('/search', {
